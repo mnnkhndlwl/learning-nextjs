@@ -24,7 +24,8 @@ export const getStaticProps = async ({ params }) => {
     return {
         props : {
             coinData : data.data
-        }
+        },
+        revalidate: 5,
     }
 }
 export default CoinList;
